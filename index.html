@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <h1>Welcome to ProView</h1>
+        <p>Explore our projects and hear from happy clients</p>
+        <button id="themeToggle">Toggle Dark Mode</button>
+      </div>
+    </header>
+
+    <!-- Our Projects -->
+    <section class="section">
+      <h2>Our Projects</h2>
+      <div class="card-grid" id="projectsContainer"></div>
+    </section>
+
+    <!-- Happy Clients -->
+    <section class="section alt">
+      <h2>Happy Clients</h2>
+      <div class="card-grid" id="clientsContainer"></div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="section">
+      <h2>Contact Us</h2>
+      <form id="contactForm" class="form animate">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="tel" name="mobile" placeholder="Mobile Number" required />
+        <input type="text" name="city" placeholder="City" required />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section alt">
+      <h2>Subscribe to Newsletter</h2>
+      <form onsubmit="subscribe(); return false;" class="form animate">
+        <input
+          type="email"
+          id="newsletterEmail"
+          placeholder="Enter your email"
+          required
+        />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 ProView Fullstack Project. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

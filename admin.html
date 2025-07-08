@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | ProView</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header and Navbar -->
+    <header class="header">
+      <div class="container">
+        <h1>ProView Admin Dashboard</h1>
+        <p>Manage Projects, Clients, Subscribers, and Messages</p>
+        <nav class="navbar">
+          <button class="nav-link" onclick="showSection('projectsSection')">
+            Projects
+          </button>
+          <button class="nav-link" onclick="showSection('clientsSection')">
+            Clients
+          </button>
+          <button class="nav-link" onclick="showSection('subscribersSection')">
+            Subscribers
+          </button>
+          <button class="nav-link" onclick="showSection('contactsSection')">
+            Contact Messages
+          </button>
+          <button id="themeToggle">Toggle Dark Mode</button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+      <!-- Projects Section -->
+      <section id="projectsSection" class="section">
+        <h2>Add Project</h2>
+        <form id="addProjectForm" class="form animate">
+          <input type="text" name="name" placeholder="Project Name" required />
+          <input
+            type="text"
+            name="description"
+            placeholder="Project Description"
+            required
+          />
+          <input type="url" name="imageUrl" placeholder="Image URL" required />
+          <button type="submit">Add Project</button>
+        </form>
+
+        <h3 style="margin-top: 2rem">Project List</h3>
+        <table id="projectTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <!-- Clients Section -->
+      <section id="clientsSection" class="section" style="display: none">
+        <h2>Add Client</h2>
+        <form id="addClientForm" class="form animate">
+          <input type="text" name="name" placeholder="Client Name" required />
+          <input type="text" name="description" placeholder="Review" required />
+          <input
+            type="text"
+            name="designation"
+            placeholder="Designation"
+            required
+          />
+          <input type="url" name="imageUrl" placeholder="Image URL" required />
+          <button type="submit">Add Client</button>
+        </form>
+
+        <h3 style="margin-top: 2rem">Client List</h3>
+        <table id="clientTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Review</th>
+              <th>Designation</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <!-- Subscribers Section -->
+      <section id="subscribersSection" class="section" style="display: none">
+        <h2>Newsletter Subscribers</h2>
+        <table id="subscriberTable">
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Subscribed On</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <!-- Contact Messages Section -->
+      <section id="contactsSection" class="section" style="display: none">
+        <h2>Contact Messages</h2>
+        <table id="contactTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Mobile</th>
+              <th>City</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 ProView Admin</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
